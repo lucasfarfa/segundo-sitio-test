@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<!-- proyecto multiples paginas,  al tocar logo que lleve a la principal-->
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FrontEnd Store</title> <!-- Creado front end de store -->
+    <link rel="stylesheet" href="css/normalize.css"> <!-- normalize-->
+    <link rel="preconnect" href="https://fonts.gstatic.com"> <!-- font -->
+    <link href="https://fonts.googleapis.com/css2?family=Staatliches&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css"> <!-- css -->
+</head>
+
+<body>
+    <header class="header"> <!-- BLOQUE SEGUN BEM -->
+        <a href="index.html">
+            <!-- cuando alguien clickee el logo, va al index-->
+            <!-- ELEMENTO SEGUN BEM LA IMG -->
+            <img class="header__logo" src="img/logo.png" alt="Logotipo"> <!-- en caso que no cargue la img, muestra alt en texto-->
+        </a>
+    </header>
+
+    <nav class="navegacion"> <!-- bloque -->
+        <a class="navegacion__enlace navegacion__enlace--activo" href="index.html">Tienda</a> <!-- elemento -->
+        <!-- modificador en Tienda -->
+        <a class="navegacion__enlace" href="nosotros.html">Nosotros</a>
+    </nav>
+
+    <main class="contedor">
+        <h1>Nuestros productos</h1>
+    </main>
+
+    <footer class="footer">
+        <p class="footer__texto">Front End Store - Todos los derechos reservados 2021.</p>
+    </footer>
+
+</body>
+
+</html>

@@ -1,0 +1,92 @@
+:root{
+    --primario: #9c27b0;
+    --primarioOscuro: #89119d;
+    --secundario: #ffce00;
+    --secundarioOscuro: rgb(233,287,2);
+    --blanco: #fff;
+    --negro: #000;
+
+    --fuentePrincipal: 'Staatliches', cursive;
+}
+
+/* ------ GLOBALES ------ */
+html {
+    box-sizing: border-box;
+    font-size: 62.5%; 
+}
+*, *:before, *:after {
+    box-sizing: inherit;
+}
+body{
+    background-color: var(--primario);
+    font-size: 1.6rem;
+    line-height: 1.5; /*1.5 de la base de la fuente */
+}
+p{
+    font-size: 1.8rem;
+    font-family: Arial, Helvetica, sans-serif;
+    color: var(--blanco);
+}
+a{
+    text-decoration: none;
+}
+img{
+    max-width: 100%;
+}
+.contenedor {
+    max-width: 120rem;
+    margin: 0 auto; /*centra contenido */
+}
+h1, h2, h3{
+    text-align: center;
+    color: var(--secundario);
+    font-family: var(--fuentePrincipal);
+}
+h1{ font-size: 4rem; }
+h2{ font-size: 3.2rem; }
+h3{ font-size: 2.4rem; }
+
+/*------ HEADER ------*/
+.header{ /*bloque*/
+    display: flex;
+    justify-content: center;
+}
+.header__logo{ /*elemento*/
+    margin: 3rem 0;
+}
+
+/*------ FOOTER ------*/
+.footer{
+    background-color: var(--primarioOscuro);
+    padding: 1rem 0; /*1 rem TOP BOT, 0 LEFT RIGTH*/
+    margin-top: 2rem; /*separacion con el elemento de arriba*/
+}
+.footer__texto{
+    text-align: center;
+    font-family: var(--fuentePrincipal);
+    font-size: 2.2rem;
+}
+
+/*------ NAVEGACION ------*/
+.navegacion{
+    background-color: var(--primarioOscuro);
+    padding: 1rem 0;
+    display: flex; /*usamos FLEXBOX para centraar elementos dentro de un contenedor*/
+    justify-content: center;
+    /*gap: 2rem; /* separa cada elemento de FLEXBOX en 2 rem FORMA NUEVA NO MUY SOPORTADA*/
+    /*usar margin right en nav__enlace*/
+}
+.navegacion__enlace{
+    font-family: var(--fuentePrincipal);
+    color: var(--blanco);
+    font-size: 3rem;
+    margin-right: 2rem; /*forma vieja mas soportada, en vez de GAP*/
+}
+.navegacion__enlace:last-of-type{ /*selecciona el ultimo elemento de aca es el ultimo nav*/
+    margin-right: 0; /*centra bien bien*/
+}
+.navegacion__enlace--activo, /*modificador, deja otro color en el elemento actual de nav*/
+.navegacion__enlace:hover{ /*asi cambia de color el nav al pasar el mouse*/
+    color: var(--secundario);
+}
+
