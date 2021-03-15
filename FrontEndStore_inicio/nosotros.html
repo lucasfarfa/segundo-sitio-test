@@ -14,15 +14,18 @@
 </head>
 
 <body>
-    <header class="header"> <!-- BLOQUE SEGUN BEM -->
+    <header class="header">
+        <!-- BLOQUE SEGUN BEM -->
         <a href="index.html">
             <!-- cuando alguien clickee el logo, va al index-->
             <!-- ELEMENTO SEGUN BEM LA IMG -->
-            <img class="header__logo" src="img/logo.png" alt="Logotipo"> <!-- en caso que no cargue la img, muestra alt en texto-->
+            <img class="header__logo" src="img/logo.png" alt="Logotipo">
+            <!-- en caso que no cargue la img, muestra alt en texto-->
         </a>
     </header>
 
-    <nav class="navegacion"> <!-- bloque -->
+    <nav class="navegacion">
+        <!-- bloque -->
         <a class="navegacion__enlace" href="index.html">Tienda</a> <!-- elemento -->
         <a class="navegacion__enlace navegacion__enlace--activo" href="nosotros.html">Nosotros</a>
         <!-- modificador en nosotros -->
@@ -30,7 +33,63 @@
 
     <main class="contedor">
         <h1>Nosotros</h1>
+        <div class="nosotros">
+            <div class="nosotros__contenido">
+                <p>Praesent ornare convallis felis, facilisis aliquam sapien ullamcorper sed.
+                    Mauris lacinia eu justo vel ultrices. Nam blandit, mauris sed suscipit mattis, nunc quam tempor
+                    lorem, a accumsan nibh dolor in velit.
+                    Nullam hendrerit risus ligula, non consequat massa cursus vel. Curabitur porta ultrices bibendum. ed
+                    imperdiet dignissim accumsan.
+                    Sed orci orci, rhoncus ut fringilla vitae, tincidunt quis nulla. In iaculis laoreet volutpat. Morbi
+                    eros sapien, feugiat eget consequat at,
+                    interdum eget velit. Integer id consequat nulla. Proin maximus elementum sem eu elementum.
+                    Integer vitae lorem bibendum, malesuada libero vel, rhoncus ipsum. Etiam a facilisis risus, sit amet
+                    consectetur libero.
+                    Aliquam erat volutpat. Integer dolor mi, molestie a aliquet ac, hendrerit nec nibh. Duis ac arcu
+                    eget diam dignissim euismod ut sed tortor.
+                </p>
+                <p>Ut lacinia arcu sem, eget iaculis orci ultricies sed. Donec at massa neque. Sed tempus sed metus ac
+                    laoreet. Vestibulum in facilisis mauris.
+                    Integer finibus malesuada molestie. Aenean nulla lorem, eleifend euismod congue in, tempus eu
+                    sapien. Aliquam elit enim, lobortis pulvinar cursus vitae,
+                </p>
+            </div>
+            <img src="img/nosotros.jpg" alt="imagen nosotros" class="nosotros__imagen">
+        </div>
     </main>
+
+    <section class="contenedor comprar">
+        <h2 class="comprar__titulo"></h2>
+
+        <div class="bloques">
+            <div class="bloque">
+                <img class="bloque__imagen" src="img/icono_1.png" alt="porque comprar">
+                <h3 class="bloque__titulo">El mejor precio</h3>
+                <p>Aliquam erat volutpat. Integer dolor mi, molestie a aliquet ac, hendrerit nec nibh.</p>
+            </div>
+            <!--.bloque-->
+            <div class="bloque">
+                <img class="bloque__imagen" src="img/icono_2.png" alt="porque comprar">
+                <h3 class="bloque__titulo">Para devs</h3>
+                <p>Aliquam erat volutpat. Integer dolor mi, molestie a aliquet ac, hendrerit nec nibh.</p>
+            </div>
+            <!--.bloque-->
+            <div class="bloque">
+                <img class="bloque__imagen" src="img/icono_3.png" alt="porque comprar">
+                <h3 class="bloque__titulo">Envio gratis</h3>
+                <p>Aliquam erat volutpat. Integer dolor mi, molestie a aliquet ac, hendrerit nec nibh.</p>
+            </div>
+            <!--.bloque-->
+            <div class="bloque">
+                <img class="bloque__imagen" src="img/icono_4.png" alt="porque comprar">
+                <h3 class="bloque__titulo">La mejor calidad</h3>
+                <p>Aliquam erat volutpat. Integer dolor mi, molestie a aliquet ac, hendrerit nec nibh.</p>
+            </div>
+            <!--.bloque-->
+        </div>
+        <!--bloques-->
+    </section>
+    <!--contenedor comprar-->
 
     <footer class="footer">
         <p class="footer__texto">Front End Store - Todos los derechos reservados 2021.</p>

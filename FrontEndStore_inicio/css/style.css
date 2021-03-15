@@ -31,7 +31,7 @@ a{
     text-decoration: none;
 }
 img{
-    max-width: 100%;
+    width: 100%;
 }
 .contenedor {
     max-width: 120rem;
@@ -90,3 +90,140 @@ h3{ font-size: 2.4rem; }
     color: var(--secundario);
 }
 
+/*------ GRID ------*/
+.grid{ /* va a colocar en grid a los productos */
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 2rem; /*column y row gap en una linea */
+}
+@media (min-width: 768px) {
+    .grid{
+        grid-template-columns: repeat(3, minmax(0, 1fr)); /*en pantallas grandes 3 columnas en vez de 2*/
+    }/* ojo min max a revisar*/
+}/*FRONT END TIEDA VIRTUAL*/
+
+/*------ PRODUCTOS ------*/
+.producto{
+    background-color: var(--primarioOscuro);
+    padding: 1rem;
+}
+
+.producto__nombre{
+    font-size: 4rem;
+}
+.producto__precio{
+    font-size: 2.8rem;
+    color: var(--secundario)
+}
+.producto__nombre,
+.producto__precio{
+    font-family: var(--fuentePrincipal);
+    margin: 1rem 0;
+    text-align: center;
+    line-height: 1.2;
+}
+
+/*------ GRAFICOS ------*/
+.grafico{
+    min-height: 30rem; /*muestra graficos en celus*/
+    background-repeat: no-repeat; /*que no repita la imagen*/
+    background-size: cover; /* que llene todo el espcio*/
+    grid-column: 1/3;/*ubico el grafico de la col del 2 al 3*/
+}
+.grafico--camisas{
+    grid-row: 2 / 3; /*ubico el grafico de la fila del 2 al 3*/
+    background-image: url(../img/grafico1.jpg);
+}
+.grafico--node{
+    background-image: url(../img/grafico2.jpg);
+    grid-row: 8/9;
+}
+@media (min-width: 768px) { /*sino se ve mal en dispositivos peque;os*/
+  .grafico--node{
+    grid-row: 5 / 6;
+    grid-column: 2 / 4;
+    }  
+}
+
+
+/*------ NOSOTROS ------*/
+.nosotros{
+    display: grid;
+    grid-template-rows: repeat(2, auto);
+}
+@media (min-width: 760px) {
+    .nosotros{
+        grid-template-columns: 1fr  1fr;
+        column-gap: 2rem;;
+    }
+}
+.nosotros__contenido{
+
+}
+.nosotros__imagen{
+    grid-row: 1/2;
+}
+@media (min-width: 768px) {
+    .nosotros__imagen{
+       grid-column: 2/3; 
+    }
+}
+
+/*------ BLOQUES ------*/
+.bloques{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 2rem;
+}
+@media (min-width: 768px) {
+    .bloques{
+        grid-template-columns: repeat(4,1fr);
+    }
+}
+
+.bloque{
+    text-align: center;
+}
+.bloque__titulo{
+    margin: 0;
+}
+
+/*------ PAGINA PRODUCTO ------*/
+@media (min-width: 768px) {
+    .camisa{
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        column-gap: 2rem;
+    }
+}
+.formulario{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 2rem;
+}
+.formulario__campo{
+    border-color: var(--primarioOscuro);
+    border-width: 1rem;
+    border-style: solid;
+    /*border: 1rem solid var(--primarioOscuro); */
+    background-color: transparent;
+    color: var(--blanco);
+    font-size: 2rem;
+    font-family: Arial, Helvetica, sans-serif;
+    padding: 1rem;
+    appearance: none; /*quitar flecha al select*/
+}
+.formulario__submit{
+    background-color: var(--secundario);
+    border: none;
+    font-size: 2rem;
+    font-family: var(--fuentePrincipal);
+    padding: 2rem;
+    transition: background-color .3s ease; /*a que animacion, tiempo, tipo*/
+    /*se puede con color, letras, tamaños etc*/
+    grid-column: 1/3;
+}
+.formulario__submit:hover{
+    cursor: pointer;
+    background-color: var(--secundarioOscuro);
+}
